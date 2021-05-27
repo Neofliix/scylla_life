@@ -1,0 +1,16 @@
+function AddTextEntry(key, value)
+	Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
+end
+
+Citizen.CreateThread(function()
+  AddTextEntry('FE_THDR_GTAO', '~b~Bienvenue sur le serveur ~r~Scylla RP~b~ | ~p~Votre id: ~y~'.. GetPlayerServerId(PlayerId()))
+  AddTextEntry('PM_PANE_LEAVE', '~o~Retourner sur la liste des serveurs')
+  AddTextEntry('PM_PANE_QUIT', '~r~Quitter FiveM et retourner sur le bureau')
+  AddTextEntry('PM_SCR_MAP', '~g~Carte de Los Santos')
+  AddTextEntry('PM_SCR_GAM', '~r~Prendre l\'avion')
+  AddTextEntry('PM_SCR_INF', '~p~Logs')
+  AddTextEntry('PM_SCR_SET', '~b~Configuration')
+  AddTextEntry('PM_SCR_STA', '~q~Statistiques')
+  AddTextEntry('PM_SCR_GAL', '~p~Galerie')
+  AddTextEntry('PM_SCR_RPL', '~y~Éditeur ∑')
+end)
